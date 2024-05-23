@@ -7,20 +7,15 @@ import { GameComplete } from './scenes/GameComplete';
 
 const config = {
     type: Phaser.AUTO,
-    width: 1024,
+    width: 1004,
     height: 768,
     parent: 'game-container',
-    backgroundColor: '#028af8',
+    backgroundColor: '#00000',
     physics: {
         default: 'arcade',
         arcade: {
             gravity: { y: 0 }
         },
-        debug: true
-    },
-    scale: {
-        mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH
     },
     scene: [
         Boot,
@@ -29,7 +24,8 @@ const config = {
         Game,
         GameComplete,
         GameOver
-    ]
+    ],
+    debug: true
 };
 
 export default new Phaser.Game(config);
